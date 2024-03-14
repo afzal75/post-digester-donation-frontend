@@ -1,11 +1,10 @@
-import { Button } from "./components/ui/button"
+import Navbar from "./components/layout/Navbar"
 
 function App() {
 
   return (
     <>
-      <h1 className="text-6xl uppercase underline">Relife Donation</h1>
-      <Button>Jerin</Button>
+      <Navbar />
     </>
   )
 }
