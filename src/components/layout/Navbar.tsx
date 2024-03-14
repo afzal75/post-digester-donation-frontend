@@ -1,13 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-// import { useAppSelector } from "@/redux/hook";
-
-// import Sidebar from "./Sidebar";
-
-// import SelectTheme from "../SelectTheme";
 
 const Navbar = () => {
-    // const { user } = useAppSelector((state) => state.auth);
 
     return (
         <header className="container text-center font-semibold relative mx-auto flex flex-col px-4 py-4 lg:flex-row lg:items-center">
@@ -48,7 +42,7 @@ const Navbar = () => {
                 <hr className="mt-4 w-full lg:hidden" />
                 <div className="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
                     <ul className="flex text-center lg:space-x-4 w-full  flex-col items-center justify-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
-                        {/* <li>
+                        <li>
                             <Link
                                 className="group  transition-all duration-300 ease-in-out"
                                 to="/"
@@ -57,8 +51,8 @@ const Navbar = () => {
                                     Home
                                 </span>
                             </Link>
-                        </li> */}
-                        {/* <li>
+                        </li>
+                        <li>
                             <Link
                                 className="group  transition-all duration-300 ease-in-out"
                                 to="/supplies"
@@ -87,12 +81,11 @@ const Navbar = () => {
                                     Community
                                 </span>
                             </Link>
-                        </li> */}
-
+                        </li>
                         <li>
 
                             <div>
-                                {/* <Sidebar /> */}
+
                             </div>
 
                             <Link to="/login">
