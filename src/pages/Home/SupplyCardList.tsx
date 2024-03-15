@@ -22,12 +22,18 @@ const SupplyCardList = () => {
                 title="Featured Supplies"
                 subTitle="Explore essential health and medical resources for post-disaster relief efforts."
             />
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4">
+                {data?.result?.slice(0, 6)?.map((supplyPost: TSupply) => (
+                    <SupplyCard {...supplyPost} key={supplyPost._id} />
+                ))}
+            </div>
 
-            <div className="flex items-end justify-end">
+            <div className="flex items-end justify-center">
                 <div>
                     <Link to="/supplies">
-                        <Button variant="link" className="gap-2 text-xl mr-4">
-                            See All{" "}
+                        <Button variant="link" className="gap-2 border text-xl mt-8 mr-4">
+                            View All {""}
+
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
@@ -43,11 +49,6 @@ const SupplyCardList = () => {
                         </Button>
                     </Link>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4">
-                {data?.result?.slice(0, 6)?.map((supplyPost: TSupply) => (
-                    <SupplyCard {...supplyPost} key={supplyPost._id} />
-                ))}
             </div>
         </motion.div>
     );
