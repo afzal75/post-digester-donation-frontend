@@ -72,8 +72,7 @@ const LoginForm = () => {
 
             <div className="!mt-10">
                 <Button type="submit" className="w-full">
-                    Login
-                    {/* {isLoading ? "Logging" : "Login"} */}
+                    {isLoading ? "Logging" : "Login"}
                 </Button>
             </div>
         </form>

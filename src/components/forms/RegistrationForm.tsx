@@ -64,8 +64,7 @@ const RegisterForm = () => {
 
             <div className="!mt-10">
                 <Button type="submit" className="w-full">
-                    Register
-                    {/* {isLoading ? "Registering..." : "Register"} */}
+                    {isLoading ? "Registering..." : "Register"}
                 </Button>
             </div>
         </form>
