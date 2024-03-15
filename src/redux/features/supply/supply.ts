@@ -10,9 +10,17 @@ const supplyApi = baseApi.injectEndpoints({
             }),
             providesTags: ["Supplies"],
         }),
+        getSingleSupply: builder.query({
+            query: (id) => ({
+                url: `/supplies/${id}`,
+                method: "GET",
+            }),
+        }),
     }),
+
 });
 
 export const {
     useGetSuppliesQuery,
+    useGetSingleSupplyQuery
 } = supplyApi;
