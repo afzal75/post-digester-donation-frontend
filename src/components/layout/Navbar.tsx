@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
+import Sidebar from "./Sidebar";
+import { useAppSelector } from "@/redux/hook";
 
 const Navbar = () => {
-
+    const { user } = useAppSelector((state) => state.auth);
     return (
         <header className="container text-center font-semibold relative mx-auto flex flex-col px-4 py-4 lg:flex-row lg:items-center">
             <Link
@@ -88,9 +90,17 @@ const Navbar = () => {
 
                             </div>
 
-                            <Link to="/login">
-                                <Button>Login</Button>
-                            </Link>
+                            <li>
+                                {user ? (
+                                    <div title={user?.email}>
+                                        <Sidebar />
+                                    </div>
+                                ) : (
+                                    <Link to="/login">
+                                        <Button>Login</Button>
+                                    </Link>
+                                )}
+                            </li>
 
                         </li>
                         <li>
