@@ -6,6 +6,7 @@ import Supplies from "@/pages/supplies/Supplies";
 import SupplyDetail from "@/components/ui/SupplyDetail";
 import AdminLayout from "@/components/layout/AdminLayout";
 import AllSupplies from "@/pages/admin/AllSupplies";
+import CreateSupply from "@/pages/admin/CreateSupply";
 
 
 export const router = createBrowserRouter([
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/supplies",
                 element: <AllSupplies />,
+            },
+            {
+                path: "/dashboard/create-supply",
+                element: <CreateSupply />,
             },
         ]
     },
