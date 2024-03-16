@@ -38,7 +38,7 @@ const AdminLayout = () => {
                     </div>
                 </Content>
                 <Footer style={{ textAlign: "center" }}>
-                    MedReliefHub ©{new Date().getFullYear()} Created by Apu Sutra Dhar
+                    MedReliefHub ©{new Date().getFullYear()} Created by Afzal Bhuiyan
                 </Footer>
             </Layout>
         </Layout>

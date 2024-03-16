@@ -5,6 +5,7 @@ import Login from "@/pages/Login";
 import Supplies from "@/pages/supplies/Supplies";
 import SupplyDetail from "@/components/ui/SupplyDetail";
 import AdminLayout from "@/components/layout/AdminLayout";
+import AllSupplies from "@/pages/admin/AllSupplies";
 
 
 export const router = createBrowserRouter([
@@ -34,6 +35,12 @@ export const router = createBrowserRouter([
     {
         path: "dashboard",
         element:
-            <AdminLayout />
+            <AdminLayout />,
+        children: [
+            {
+                path: "/dashboard/supplies",
+                element: <AllSupplies />,
+            },
+        ]
     },
 ]);
