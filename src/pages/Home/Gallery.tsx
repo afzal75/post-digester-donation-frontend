@@ -1,6 +1,4 @@
 import LightGallery from "lightgallery/react";
-
-// import styles
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";

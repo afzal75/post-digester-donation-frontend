@@ -1,3 +1,4 @@
+import AboutUs from "./AboutUs";
 import Banner from "./Banner";
 import Gallery from "./Gallery";
 import SupplyCardList from "./SupplyCardList";
@@ -8,6 +9,7 @@ const Home = () => {
             <Banner />
             <SupplyCardList />
             <Gallery />
+            <AboutUs />
         </div>
     );
 };
