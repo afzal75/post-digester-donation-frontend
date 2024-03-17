@@ -1,5 +1,6 @@
 
 
+import EditSupplyModal from "@/components/ui/EditSupplyModal";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/Table";
 import { useGetSuppliesQuery } from "@/redux/features/supply/supply";
 import { TSupply } from "@/types/types";
@@ -27,16 +28,11 @@ const AllSupplies = () => {
                             <TableCell className="font-medium">{item.title}</TableCell>
                             <TableCell>{item.category}</TableCell>
                             <TableCell>{item.amount}</TableCell>
-                            {/* <TableCell className=" flex text-end justify-end mx-auto">
-                  <EditSupplyModal id={item._id as string} />
-  
-                  <Button
-                    onClick={() => showDeleteConfirm(item._id as string)}
-                    variant="ghost"
-                  >
-                    <Trash2 className="size-4 text-red-500" />
-                  </Button>
-                </TableCell> */}
+                            <TableCell className=" flex text-end justify-end mx-auto">
+                                <EditSupplyModal id={item._id as string} />
+
+
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
