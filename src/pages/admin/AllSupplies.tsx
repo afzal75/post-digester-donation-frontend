@@ -1,14 +1,32 @@
-
-
 import EditSupplyModal from "@/components/ui/EditSupplyModal";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/Table";
-import { useGetSuppliesQuery } from "@/redux/features/supply/supply";
+import { Button } from "@/components/ui/button";
+import { useDeleteSuppliesMutation, useGetSuppliesQuery } from "@/redux/features/supply/supply";
 import { TSupply } from "@/types/types";
+import { Modal } from "antd";
+import { ExclamationCircleFilled } from "@ant-design/icons";
+import { Trash2 } from "lucide-react";
+import { toast } from "sonner";
 
+const { confirm } = Modal;
 const AllSupplies = () => {
     const { data } = useGetSuppliesQuery(undefined);
+    const [deleteSupply] = useDeleteSuppliesMutation();
+    const showDeleteConfirm = (id: string) => {
+        confirm({
+            title: "Are you sure delete this?",
+            icon: <ExclamationCircleFilled />,
+            content: "This will delete from the database",
+            okText: "Yes",
+            okType: "danger",
+            cancelText: "No",
+            onOk() {
+                deleteSupply(id);
 
-
+                toast.success("A supply is deleted successfully");
+            },
+        });
+    };
 
     return (
         <div>
@@ -30,7 +48,12 @@ const AllSupplies = () => {
                             <TableCell>{item.amount}</TableCell>
                             <TableCell className=" flex text-end justify-end mx-auto">
                                 <EditSupplyModal id={item._id as string} />
-
+                                <Button
+                                    onClick={() => showDeleteConfirm(item._id as string)}
+                                    variant="ghost"
+                                >
+                                    <Trash2 className="size-4 text-red-500" />
+                                </Button>
 
                             </TableCell>
                         </TableRow>
