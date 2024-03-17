@@ -1,14 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import SupplyForm from "@/components/forms/SupplyForm";
 import getImageURL from "@/lib/getImageURL";
-import { useCreateSupplyMutation } from "@/redux/features/supply/supply";
 import { TSupply } from "@/types/types";
 
 import { ChangeEvent, useState } from "react";
 import { toast } from "sonner";
 
-const CreateSupply = () => {
-    const [createSupply] = useCreateSupplyMutation();
+const CreateDonation = () => {
+    const [createSupply] = useCreateDonationMutation();
     const [image, setImage] = useState(null);
     const onFinish = async (values: TSupply) => {
         if (image) {
@@ -40,4 +39,4 @@ const CreateSupply = () => {
     );
 };
 
-export default CreateSupply;
+export default CreateDonation;

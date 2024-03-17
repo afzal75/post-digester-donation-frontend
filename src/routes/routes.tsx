@@ -5,8 +5,8 @@ import Login from "@/pages/Login";
 import Supplies from "@/pages/supplies/Supplies";
 import SupplyDetail from "@/components/ui/SupplyDetail";
 import AdminLayout from "@/components/layout/AdminLayout";
-import AllSupplies from "@/pages/admin/AllSupplies";
-import CreateSupply from "@/pages/admin/CreateSupply";
+import AllSupplies from "@/pages/admin/AllDonations";
+import CreateSupply from "@/pages/admin/CreateDonation";
 
 
 export const router = createBrowserRouter([

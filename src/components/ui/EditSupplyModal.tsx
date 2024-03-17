@@ -6,7 +6,7 @@ import SupplyForm from "../forms/SupplyForm";
 import getImageURL from "@/lib/getImageURL";
 import { toast } from "sonner";
 import { TSupply } from "@/types/types";
-import { useUpdateSupplyMutation } from "@/redux/features/supply/supply";
+import { useUpdateDonationMutation } from "@/redux/features/donation/donation";
 
 const EditSupplyModal = ({ id }: { id: string }) => {
     const [image, setImage] = useState(null);
@@ -17,7 +17,7 @@ const EditSupplyModal = ({ id }: { id: string }) => {
     const handleCancel = () => {
         setIsModalOpen(false);
     };
-    const [updateSupply] = useUpdateSupplyMutation();
+    const [updateSupply] = useUpdateDonationMutation();
 
     const onFinish = async (values: Partial<TSupply>) => {
         if (image) {

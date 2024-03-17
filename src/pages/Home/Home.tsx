@@ -1,7 +1,7 @@
 import AboutUs from "./AboutUs";
 import Banner from "./Banner";
 import Gallery from "./Gallery";
-import SupplyCardList from "./SupplyCardList";
+import SupplyCardList from "./DonationCardList";
 
 const Home = () => {
     return (

@@ -1,17 +1,17 @@
 import EditSupplyModal from "@/components/ui/EditSupplyModal";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/Table";
 import { Button } from "@/components/ui/button";
-import { useDeleteSuppliesMutation, useGetSuppliesQuery } from "@/redux/features/supply/supply";
 import { TSupply } from "@/types/types";
 import { Modal } from "antd";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import { Trash2 } from "lucide-react";
 import { toast } from "sonner";
+import { useDeleteDonationsMutation, useGetDonationsQuery } from "@/redux/features/donation/donation";
 
 const { confirm } = Modal;
-const AllSupplies = () => {
-    const { data } = useGetSuppliesQuery(undefined);
-    const [deleteSupply] = useDeleteSuppliesMutation();
+const AllDonations = () => {
+    const { data } = useGetDonationsQuery(undefined);
+    const [deleteSupply] = useDeleteDonationsMutation();
     const showDeleteConfirm = (id: string) => {
         confirm({
             title: "Are you sure delete this?",
@@ -72,4 +72,4 @@ const AllSupplies = () => {
     );
 };
 
-export default AllSupplies;
+export default AllDonations;

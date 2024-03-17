@@ -2,7 +2,7 @@ import { baseApi } from "@/redux/api/baseApi";
 
 const supplyApi = baseApi.injectEndpoints({
     endpoints: (builder) => ({
-        createSupply: builder.mutation({
+        createDonation: builder.mutation({
             query: (supply) => ({
                 url: "/supplies",
                 method: "POST",
@@ -10,20 +10,20 @@ const supplyApi = baseApi.injectEndpoints({
             }),
             invalidatesTags: ["Supplies"],
         }),
-        getSupplies: builder.query({
+        getDonations: builder.query({
             query: () => ({
                 url: "/supplies",
                 method: "GET",
             }),
             providesTags: ["Supplies"],
         }),
-        getSingleSupply: builder.query({
+        getSingleDonation: builder.query({
             query: (id) => ({
                 url: `/supplies/${id}`,
                 method: "GET",
             }),
         }),
-        updateSupply: builder.mutation({
+        updateDonation: builder.mutation({
             query: (data) => {
                 return {
                     url: `/supplies/${data.id}`,
@@ -33,7 +33,7 @@ const supplyApi = baseApi.injectEndpoints({
             },
             invalidatesTags: ["Supplies"],
         }),
-        deleteSupplies: builder.mutation({
+        deleteDonations: builder.mutation({
             query: (id) => ({
                 url: `/supplies/${id}`,
                 method: "DELETE",
@@ -45,9 +45,8 @@ const supplyApi = baseApi.injectEndpoints({
 });
 
 export const {
-    useCreateSupplyMutation,
-    useGetSuppliesQuery,
-    useGetSingleSupplyQuery,
-    useUpdateSupplyMutation,
-    useDeleteSuppliesMutation
+    useCreateDonationMutation,
+    useGetDonationsQuery,
+    useGetSingleDonationQuery,
+    useDeleteDonationsMutation
 } = supplyApi;

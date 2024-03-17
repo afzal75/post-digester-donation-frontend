@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 // import useAnimateComponent from "@/hooks/useAnimateComponent";
 import { TSupply } from "@/types/types";
-import { useGetSuppliesQuery } from "@/redux/features/supply/supply";
-const SupplyCardList = () => {
-    const { data } = useGetSuppliesQuery(undefined);
+import { useGetDonationsQuery } from "@/redux/features/donation/donation";
+const DonationCardList = () => {
+    const { data } = useGetDonationsQuery(undefined);
     // const { ref, variants, control } = useAnimateComponent();
     return (
         <motion.div
@@ -54,4 +54,4 @@ const SupplyCardList = () => {
     );
 };
 
-export default SupplyCardList;
+export default DonationCardList;

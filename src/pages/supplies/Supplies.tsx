@@ -1,6 +1,6 @@
 import Loading from "@/components/ui/Loading";
 import { Button } from "@/components/ui/button";
-import { useGetSuppliesQuery } from "@/redux/features/supply/supply";
+import { useGetSuppliesQuery } from "@/redux/features/donation/donation";
 import { TSupply } from "@/types/types";
 import { Link } from "react-router-dom";
 

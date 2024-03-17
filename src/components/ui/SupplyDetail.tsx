@@ -2,7 +2,7 @@
 import { useParams } from "react-router-dom";
 import { Button } from "./button";
 import { toast } from "sonner";
-import { useGetSingleSupplyQuery } from "@/redux/features/supply/supply";
+import { useGetSingleSupplyQuery } from "@/redux/features/donation/donation";
 import { TSupply } from "@/types/types";
 
 const SupplyDetail = () => {
