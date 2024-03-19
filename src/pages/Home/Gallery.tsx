@@ -6,14 +6,9 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { motion } from "framer-motion";
-// import useAnimateComponent from "@/hooks/useAnimateComponent";
 const Gallery = () => {
-    // const { ref, variants, control } = useAnimateComponent();
     return (
         <motion.div
-            // ref={ref}
-            // variants={variants}
-            // animate={control}
             initial="hidden"
             className="container my-10"
         >

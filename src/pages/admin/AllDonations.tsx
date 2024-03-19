@@ -1,7 +1,7 @@
 import EditSupplyModal from "@/components/ui/EditDonateModal";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/Table";
 import { Button } from "@/components/ui/button";
-import { TSupply } from "@/types/types";
+import { TDonation } from "@/types/types";
 import { Modal } from "antd";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import { Trash2 } from "lucide-react";
@@ -11,7 +11,7 @@ import { useDeleteDonationsMutation, useGetDonationsQuery } from "@/redux/featur
 const { confirm } = Modal;
 const AllDonations = () => {
     const { data } = useGetDonationsQuery(undefined);
-    const [deleteSupply] = useDeleteDonationsMutation();
+    const [deleteDonation] = useDeleteDonationsMutation();
     const showDeleteConfirm = (id: string) => {
         confirm({
             title: "Are you sure delete this?",
@@ -21,9 +21,9 @@ const AllDonations = () => {
             okType: "danger",
             cancelText: "No",
             onOk() {
-                deleteSupply(id);
+                deleteDonation(id);
 
-                toast.success("A supply is deleted successfully");
+                toast.success("A donation is deleted successfully");
             },
         });
     };
@@ -31,7 +31,7 @@ const AllDonations = () => {
     return (
         <div>
             <Table>
-                <TableCaption>A list of your recent supplies post.</TableCaption>
+                <TableCaption>A list of your recent donations post.</TableCaption>
                 <TableHeader>
                     <TableRow>
                         <TableHead className="">Title</TableHead>
@@ -41,7 +41,7 @@ const AllDonations = () => {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {data?.result?.map((item: TSupply) => (
+                    {data?.result?.map((item: TDonation) => (
                         <TableRow key={item._id}>
                             <TableCell className="font-medium">{item.title}</TableCell>
                             <TableCell>{item.category}</TableCell>

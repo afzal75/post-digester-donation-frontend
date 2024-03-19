@@ -2,21 +2,21 @@
 import SupplyForm from "@/components/forms/DonateForm";
 import getImageURL from "@/lib/getImageURL";
 import { useCreateDonationMutation } from "@/redux/features/donation/donation";
-import { TSupply } from "@/types/types";
+import { TDonation } from "@/types/types";
 import { ChangeEvent, useState } from "react";
 import { toast } from "sonner";
 
 const CreateDonation = () => {
     const [createSupply] = useCreateDonationMutation();
     const [image, setImage] = useState(null);
-    const onFinish = async (values: TSupply) => {
+    const onFinish = async (values: TDonation) => {
         if (image) {
             values.image = image;
             const res = await createSupply(values).unwrap();
             if (res.result.insertedId) {
-                toast.success("Your supply post added successfully");
+                toast.success("Your donation post added successfully");
             } else {
-                toast.error("Something went wrong while add supply");
+                toast.error("Something went wrong while add donation");
             }
             console.log(res);
         }

@@ -5,7 +5,9 @@ import Navbar from "./Navbar";
 const MainLayout = () => {
     return (
         <div>
-            <Navbar />
+            <div className="sticky top-0 z-50">
+                <Navbar />
+            </div>
             <Outlet />
         </div>
     );

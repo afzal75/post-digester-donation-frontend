@@ -1,4 +1,4 @@
-export type TSupply = {
+export type TDonation = {
     _id?: string;
     amount: number;
     category: string;

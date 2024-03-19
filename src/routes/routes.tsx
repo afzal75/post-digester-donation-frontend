@@ -2,11 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../components/layout/MainLayout";
 import Home from "@/pages/Home/Home";
 import Login from "@/pages/Login";
-import Supplies from "@/pages/supplies/Donations";
-import SupplyDetail from "@/components/ui/DonationDetail";
+import Donations from "@/pages/donations/Donations";
+import DonationDetail from "@/components/ui/DonationDetail";
 import AdminLayout from "@/components/layout/AdminLayout";
-import AllSupplies from "@/pages/admin/AllDonations";
-import CreateSupply from "@/pages/admin/CreateDonation";
+import AllDonations from "@/pages/admin/AllDonations";
+import CreateDonation from "@/pages/admin/CreateDonation";
 import Dashboard from "@/pages/admin/Dashboard";
 
 
@@ -20,12 +20,12 @@ export const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/supplies",
-                element: <Supplies />,
+                path: "/donations",
+                element: <Donations />,
             },
             {
-                path: "/supplies/:id",
-                element: <SupplyDetail />,
+                path: "/donations/:id",
+                element: <DonationDetail />,
             },
             {
                 path: "/login",
@@ -45,12 +45,12 @@ export const router = createBrowserRouter([
             }
             ,
             {
-                path: "/dashboard/supplies",
-                element: <AllSupplies />,
+                path: "/dashboard/donations",
+                element: <AllDonations />,
             },
             {
-                path: "/dashboard/create-supply",
-                element: <CreateSupply />,
+                path: "/dashboard/create-donation",
+                element: <CreateDonation />,
             },
         ]
     },

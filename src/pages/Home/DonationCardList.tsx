@@ -1,19 +1,14 @@
 import SectionTitle from "@/components/ui/SectionTitle";
-import SupplyCard from "@/components/ui/DonateCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-// import useAnimateComponent from "@/hooks/useAnimateComponent";
-import { TSupply } from "@/types/types";
+import { TDonation } from "@/types/types";
 import { useGetDonationsQuery } from "@/redux/features/donation/donation";
+import DonationCard from "@/components/ui/DonationCard";
 const DonationCardList = () => {
     const { data } = useGetDonationsQuery(undefined);
-    // const { ref, variants, control } = useAnimateComponent();
     return (
         <motion.div
-            // ref={ref}
-            // variants={variants}
-            // animate={control}
             initial="hidden"
             className="container my-20"
         >
@@ -23,14 +18,14 @@ const DonationCardList = () => {
                 subTitle="Explore essential health and medical resources for post-disaster relief efforts."
             />
             <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4">
-                {data?.result?.slice(0, 6)?.map((supplyPost: TSupply) => (
-                    <SupplyCard {...supplyPost} key={supplyPost._id} />
+                {data?.result?.slice(0, 6)?.map((donationPost: TDonation) => (
+                    <DonationCard {...donationPost} key={donationPost._id} />
                 ))}
             </div>
 
             <div className="flex items-end justify-center">
                 <div>
-                    <Link to="/supplies">
+                    <Link to="/donations">
                         <Button variant="link" className="gap-2 border text-xl mt-8 mr-4">
                             View All {""}
 
@@ -55,3 +50,53 @@ const DonationCardList = () => {
 };
 
 export default DonationCardList;
+
+
+
+
+// import { Link } from "react-router-dom";
+
+// import { motion } from "framer-motion";
+// import useScrollGrow from "@/hooks/ScrollGrowHook";
+// import { TDonation } from "@/types/types";
+// import { Button } from "@/components/ui/button";
+
+// const DonationCardList = ({ donation }: { donation: TDonation }) => {
+//     const { style, componentRef } = useScrollGrow();
+//     const { _id, amount, category, image, title } = donation;
+//     return (
+//         <motion.div
+//             className="w-[250px] sm:min-w-80 lg:min-w-full bg-white dark:bg-zinc-950 rounded-md shadow-md dark:shadow-zinc-900 overflow-hidden"
+//             style={style}
+//             ref={componentRef}
+//         >
+//             <img
+//                 className="w-full hover:scale-105 duration-500 h-60"
+//                 src={image}
+//                 alt=""
+//             />
+//             <div className="p-5 flex justify-between flex-col h-52">
+//                 <div>
+//                     <h3 className="text-lg text-primary dark:text-white font-bold">
+//                         {title}
+//                     </h3>
+//                     <h4 className="text-slate-700 dark:text-slate-300">{category}</h4>
+//                     <p className="italic text-secondary font-semibold">
+//                         <span className=" text-primary dark:text-secondary">$</span>
+//                         {amount}
+//                     </p>
+//                 </div>
+//                 <div className="mt-5 text-center w-full">
+//                     <Link to={`/donations/${_id}`}>
+//                         {" "}
+//                         <Button className="w-full bg-primary dark:bg-secondary duration-500">
+//                             View Detail
+//                         </Button>
+//                     </Link>
+//                 </div>
+//             </div>
+//         </motion.div>
+//     );
+// };
+
+// export default DonationCardList;

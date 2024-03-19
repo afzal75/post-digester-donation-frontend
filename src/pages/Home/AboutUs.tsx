@@ -1,16 +1,11 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/button";
-// import useAnimateComponent from "@/hooks/useAnimateComponent";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {
-    // const { ref, variants, control } = useAnimateComponent();
 
     return (
         <motion.div
-            // ref={ref}
-            // variants={variants}
-            // animate={control}
             initial="hidden"
             id="about"
             className="container relative overflow-hidden py-10 my-10"

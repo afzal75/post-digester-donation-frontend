@@ -1,7 +1,7 @@
 import Loading from "@/components/ui/Loading";
 import { Button } from "@/components/ui/button";
 import { useGetDonationsQuery } from "@/redux/features/donation/donation";
-import { TSupply } from "@/types/types";
+import { TDonation } from "@/types/types";
 import { Link } from "react-router-dom";
 
 const Donations = () => {
@@ -14,7 +14,7 @@ const Donations = () => {
     return (
         <div className="container my-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {data?.result?.map((item: TSupply) => (
+                {data?.result?.map((item: TDonation) => (
                     <div
                         key={item._id}
                         className=" grid grid-cols-3 items-center w-full rounded-xl  mx-auto  shadow-2xl"
@@ -49,7 +49,7 @@ const Donations = () => {
                             </div>
 
                             <div className="flex justify-end">
-                                <Link to={`/supplies/${item._id}`}>
+                                <Link to={`/donations/${item._id}`}>
                                     <Button
                                         variant={"outline"}
                                         className="flex group items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex"

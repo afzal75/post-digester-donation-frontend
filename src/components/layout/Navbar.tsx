@@ -6,7 +6,7 @@ import { useAppSelector } from "@/redux/hook";
 const Navbar = () => {
     const { user } = useAppSelector((state) => state.auth);
     return (
-        <header className="container text-center font-semibold relative mx-auto flex flex-col px-4 py-4 lg:flex-row lg:items-center">
+        <header className="container bg-primary text-white text-center font-semibold relative mx-auto flex flex-col px-4 py-4 lg:flex-row lg:items-center">
             <Link
                 to="/"
                 className="flex ms-4 items-center whitespace-nowrap text-2xl font-black"
@@ -57,10 +57,10 @@ const Navbar = () => {
                         <li>
                             <Link
                                 className="group  transition-all duration-300 ease-in-out"
-                                to="/supplies"
+                                to="/donations"
                             >
                                 <span className=" bg-left-bottom pb-2 bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                    All Supplies
+                                    All Donations
                                 </span>
                             </Link>
                         </li>
@@ -84,7 +84,6 @@ const Navbar = () => {
 
                         </li>
                         <li>
-                            {/* <SelectTheme /> */}
                         </li>
                     </ul>
                 </div>
