@@ -13,7 +13,7 @@ const DonationCardList = () => {
             className="container my-20"
         >
             <SectionTitle
-                name="Supplies"
+                name="Donations"
                 title="Featured Donations"
                 subTitle="Explore essential health and medical resources for post-disaster relief efforts."
             />
