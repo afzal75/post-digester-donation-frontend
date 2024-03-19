@@ -65,26 +65,6 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                className="group  transition-all duration-300 ease-in-out"
-                                to="/leaderboard"
-                            >
-                                <span className=" bg-left-bottom pb-2 bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                    Leaderboard
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                className="group  transition-all duration-300 ease-in-out"
-                                to="/community"
-                            >
-                                <span className=" bg-left-bottom pb-2 bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                    Community
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
 
                             <div>
 

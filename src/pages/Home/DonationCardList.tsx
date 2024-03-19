@@ -1,5 +1,5 @@
 import SectionTitle from "@/components/ui/SectionTitle";
-import SupplyCard from "@/components/ui/SupplyCard";
+import SupplyCard from "@/components/ui/DonateCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ const DonationCardList = () => {
         >
             <SectionTitle
                 name="Supplies"
-                title="Featured Supplies"
+                title="Featured Donations"
                 subTitle="Explore essential health and medical resources for post-disaster relief efforts."
             />
             <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4">

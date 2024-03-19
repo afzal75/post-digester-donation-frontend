@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../components/layout/MainLayout";
 import Home from "@/pages/Home/Home";
 import Login from "@/pages/Login";
-import Supplies from "@/pages/supplies/Supplies";
-import SupplyDetail from "@/components/ui/SupplyDetail";
+import Supplies from "@/pages/supplies/Donations";
+import SupplyDetail from "@/components/ui/DonationDetail";
 import AdminLayout from "@/components/layout/AdminLayout";
 import AllSupplies from "@/pages/admin/AllDonations";
 import CreateSupply from "@/pages/admin/CreateDonation";
+import Dashboard from "@/pages/admin/Dashboard";
 
 
 export const router = createBrowserRouter([
@@ -38,6 +39,11 @@ export const router = createBrowserRouter([
         element:
             <AdminLayout />,
         children: [
+            {
+                path: "/dashboard",
+                element: <Dashboard />,
+            }
+            ,
             {
                 path: "/dashboard/supplies",
                 element: <AllSupplies />,

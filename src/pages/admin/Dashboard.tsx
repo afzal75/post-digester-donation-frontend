@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/ui/SectionTitle";
-// import ShowPieChart from "@/components/ui/ShowPieChart";
-// import DashboardStates from "./DashboardStates";
+import ShowPieChart from "@/components/ui/ShowPieChart";
+import DashboardStates from "./DashboardStates";
 
 const Dashboard = () => {
     return (
@@ -9,11 +9,11 @@ const Dashboard = () => {
             <div className="grid md:grid-cols-2 ">
                 <div className=" shadow-xl p-3">
                     <h1 className="text-3xl font-semibold my-2">Overview Statistics</h1>
-                    {/* <ShowPieChart /> */}
+                    <ShowPieChart />
                 </div>
 
                 <div className="w-full h-full shadow-xl">
-                    {/* <DashboardStates /> */}
+                    <DashboardStates />
                 </div>
             </div>
         </div>

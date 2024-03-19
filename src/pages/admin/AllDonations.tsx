@@ -1,4 +1,4 @@
-import EditSupplyModal from "@/components/ui/EditSupplyModal";
+import EditSupplyModal from "@/components/ui/EditDonateModal";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/Table";
 import { Button } from "@/components/ui/button";
 import { TSupply } from "@/types/types";

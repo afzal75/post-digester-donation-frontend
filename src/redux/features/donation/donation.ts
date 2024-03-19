@@ -40,6 +40,13 @@ const supplyApi = baseApi.injectEndpoints({
             }),
             invalidatesTags: ["Supplies"],
         }),
+        getDonationStatistics: builder.query({
+            query: () => ({
+                url: "/statistics",
+                method: "GET",
+            }),
+            providesTags: ["Supplies"],
+        }),
     }),
 
 });
@@ -47,6 +54,8 @@ const supplyApi = baseApi.injectEndpoints({
 export const {
     useCreateDonationMutation,
     useGetDonationsQuery,
+    useUpdateDonationMutation,
     useGetSingleDonationQuery,
-    useDeleteDonationsMutation
+    useDeleteDonationsMutation,
+    useGetDonationStatisticsQuery
 } = supplyApi;
