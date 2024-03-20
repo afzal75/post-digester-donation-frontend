@@ -8,6 +8,7 @@ import AdminLayout from "@/components/layout/AdminLayout";
 import AllDonations from "@/pages/admin/AllDonations";
 import CreateDonation from "@/pages/admin/CreateDonation";
 import Dashboard from "@/pages/admin/Dashboard";
+import ProtectedRoute from "@/components/ProtectedRoute";
 
 
 export const router = createBrowserRouter([
@@ -37,7 +38,9 @@ export const router = createBrowserRouter([
     {
         path: "dashboard",
         element:
-            <AdminLayout />,
+            <ProtectedRoute>
+                <AdminLayout />
+            </ProtectedRoute>,
         children: [
             {
                 path: "/dashboard",

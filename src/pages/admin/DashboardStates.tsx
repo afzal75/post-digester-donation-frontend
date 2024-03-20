@@ -34,7 +34,7 @@ const DashboardStates = () => {
                     <div className="px-6 py-10">
                         <div className="flex items-center">
                             <h3 className="relative ml-2 inline-block text-4xl font-bold leading-none">
-                                {data?.statistics.length}
+                                {data?.statistics?.length}
                             </h3>
                             <span className="ml-3 text-base font-medium capitalize">
                                 Number of Supply Category
@@ -55,9 +55,9 @@ const DashboardStates = () => {
                     <TableBody>
                         {data?.statistics?.map((item: TStatistics, i: string) => (
                             <TableRow key={i}>
-                                <TableCell className="font-medium">{item._id}</TableCell>
-                                <TableCell>{item.totalItem}</TableCell>
-                                <TableCell>{item.totalDonation}</TableCell>
+                                <TableCell className="font-medium">{item?._id}</TableCell>
+                                <TableCell>{item?.totalItem}</TableCell>
+                                <TableCell>{item?.totalDonation}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

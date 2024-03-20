@@ -3,49 +3,49 @@ import { baseApi } from "@/redux/api/baseApi";
 const supplyApi = baseApi.injectEndpoints({
     endpoints: (builder) => ({
         createDonation: builder.mutation({
-            query: (supply) => ({
-                url: "/supplies",
+            query: (donation) => ({
+                url: "/donations",
                 method: "POST",
-                body: supply,
+                body: donation,
             }),
-            invalidatesTags: ["Supplies"],
+            invalidatesTags: ["Donations"],
         }),
         getDonations: builder.query({
             query: () => ({
-                url: "/supplies",
+                url: "/donations",
                 method: "GET",
             }),
-            providesTags: ["Supplies"],
+            providesTags: ["Donations"],
         }),
         getSingleDonation: builder.query({
             query: (id) => ({
-                url: `/supplies/${id}`,
+                url: `/donations/${id}`,
                 method: "GET",
             }),
         }),
         updateDonation: builder.mutation({
             query: (data) => {
                 return {
-                    url: `/supplies/${data.id}`,
+                    url: `/donations/${data.id}`,
                     method: "PATCH",
                     body: data.data,
                 };
             },
-            invalidatesTags: ["Supplies"],
+            invalidatesTags: ["Donations"],
         }),
         deleteDonations: builder.mutation({
             query: (id) => ({
-                url: `/supplies/${id}`,
+                url: `/donations/${id}`,
                 method: "DELETE",
             }),
-            invalidatesTags: ["Supplies"],
+            invalidatesTags: ["Donations"],
         }),
         getDonationStatistics: builder.query({
             query: () => ({
                 url: "/statistics",
                 method: "GET",
             }),
-            providesTags: ["Supplies"],
+            providesTags: ["Donations"],
         }),
     }),
 
