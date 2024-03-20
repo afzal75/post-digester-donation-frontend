@@ -8,6 +8,7 @@ import {
     EditOutlined,
     OrderedListOutlined,
 } from "@ant-design/icons";
+import logo from '../../assets/logo.jpg'
 
 // import { Link } from "react-router-dom";
 const AdminSidebar = () => {
@@ -18,18 +19,18 @@ const AdminSidebar = () => {
             icon: React.createElement(HomeOutlined),
         },
         {
-            key: "all-supplies",
-            label: "All Supplies",
+            key: "all-donations",
+            label: "All Donations",
             icon: React.createElement(OrderedListOutlined),
             children: [
                 {
-                    key: "supplies",
-                    label: <NavLink to="/dashboard/supplies">Supplies</NavLink>,
+                    key: "donations",
+                    label: <NavLink to="/dashboard/donations">Donations</NavLink>,
                     icon: React.createElement(FileDoneOutlined),
                 },
                 {
-                    key: "create-supply",
-                    label: <NavLink to="/dashboard/create-supply">Create Supply</NavLink>,
+                    key: "create-donation",
+                    label: <NavLink to="/dashboard/create-donation">Create Donation</NavLink>,
                     icon: React.createElement(EditOutlined),
                 },
             ],
@@ -40,12 +41,6 @@ const AdminSidebar = () => {
             breakpoint="lg"
             theme="light"
             collapsedWidth="0"
-        //   onBreakpoint={(broken) => {
-        //     console.log(broken);
-        //   }}
-        //   onCollapse={(collapsed, type) => {
-        //     console.log(collapsed, type);
-        //   }}
         >
             <div className="demo-logo-vertical h-20">
                 <Link
@@ -53,8 +48,8 @@ const AdminSidebar = () => {
                     className="flex ms-4  items-center h-full  text-2xl font-black"
                 >
                     <span className="flex gap-1 justify-center items-center bold">
-                        <img className="size-8" src="logo.svg" alt="" />
-                        MedReliefHub
+                        <img className="size-8" src={logo} alt="logo" />
+                        RELEFEDONATION
                     </span>
                 </Link>
             </div>

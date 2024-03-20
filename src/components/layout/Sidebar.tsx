@@ -5,14 +5,13 @@ import {
     DrawerHeader,
     DrawerTrigger,
 } from "../ui/drawer";
-
 import { logoutUser } from "@/redux/features/auth/authSlice";
 import { Modal } from "antd";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 
 import { toast } from "sonner";
 import { useAppDispatch } from "@/redux/hook";
-import { LayoutDashboard, LogOut, User } from "lucide-react";
+import { LayoutDashboard, LogOut } from "lucide-react";
 const { confirm } = Modal;
 const Sidebar = () => {
     const dispatch = useAppDispatch();
@@ -45,8 +44,7 @@ const Sidebar = () => {
                     <DrawerHeader>
                         <Link to="/" className="flex items-center  text-2xl font-black">
                             <span className="flex gap-1 justify-center items-center bold">
-                                <img src="logo.svg" alt="" />
-                                MedReliefHub
+                                RELIFEDONATION
                             </span>
                         </Link>
                     </DrawerHeader>
@@ -59,15 +57,6 @@ const Sidebar = () => {
                             >
                                 <LayoutDashboard className="size-5" />
                                 <span className="mx-4 font-medium">Dashboard</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                className="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
-                                to="/profile"
-                            >
-                                <User className="size-5" />
-                                <span className="mx-4 font-medium">Profile</span>
                             </Link>
                         </li>
                         <li

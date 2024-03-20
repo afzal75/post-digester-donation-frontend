@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import Sidebar from "./Sidebar";
 import { useAppSelector } from "@/redux/hook";
+import logo from '../../assets/logo.jpg'
 
 const Navbar = () => {
     const { user } = useAppSelector((state) => state.auth);
@@ -12,7 +13,7 @@ const Navbar = () => {
                 className="flex ms-4 items-center whitespace-nowrap text-2xl font-black"
             >
                 <span className="flex gap-1 justify-center items-center bold">
-                    <img src="logo.svg" alt="" />
+                    <img src={logo} className="size-8" alt="logo" />
                     RELIFEDONATION
                 </span>
             </Link>
