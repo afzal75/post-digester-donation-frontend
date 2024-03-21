@@ -9,6 +9,7 @@ import AllDonations from "@/pages/admin/AllDonations";
 import CreateDonation from "@/pages/admin/CreateDonation";
 import Dashboard from "@/pages/admin/Dashboard";
 import ProtectedRoute from "@/components/ProtectedRoute";
+import Leaderboard from "@/pages/donations/Leaderboard";
 
 
 export const router = createBrowserRouter([
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
             {
                 path: "/donations/:id",
                 element: <DonationDetail />,
+            },
+            {
+                path: "/leaderboard",
+                element: <Leaderboard />,
             },
             {
                 path: "/login",

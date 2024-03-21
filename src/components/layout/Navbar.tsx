@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
 import Sidebar from "./Sidebar";
 import { useAppSelector } from "@/redux/hook";
 import logo from '../../assets/logo.jpg'
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
     const { user } = useAppSelector((state) => state.auth);
@@ -54,6 +55,20 @@ const Navbar = () => {
                                     Home
                                 </span>
                             </Link>
+                        </li>
+                        <li
+                            className="lg:mb-0 mb-5 cursor-pointer  group relative text-white hover:text-secondary"
+                        >
+                            <NavLink
+                                to="/leaderboard"
+                                className={({ isActive }) =>
+                                    cn({
+                                        "text-secondary": isActive,
+                                    })
+                                }
+                            >
+                                Leaderboard
+                            </NavLink>
                         </li>
                         <li>
                             <Link
