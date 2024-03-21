@@ -11,6 +11,7 @@ import Dashboard from "@/pages/admin/Dashboard";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Leaderboard from "@/pages/donations/Leaderboard";
 import Community from "@/pages/community/Community";
+import VolunteerForm from "@/components/forms/VolunteerForm";
 
 
 export const router = createBrowserRouter([
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             {
                 path: "/community",
                 element: <Community />,
+            },
+            {
+                path: "/volunteer",
+                element: <VolunteerForm />,
             },
             {
                 path: "/login",

@@ -25,3 +25,19 @@ export type TDonorData = {
     email: string;
     amount: number;
 };
+
+
+
+export type TVolunteer = {
+    _id: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    country: string;
+    address: string;
+    city: string;
+    state: string;
+    postalCode: string;
+    image?: string;
+};

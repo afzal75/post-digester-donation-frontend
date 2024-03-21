@@ -1,9 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import Sidebar from "./Sidebar";
 import { useAppSelector } from "@/redux/hook";
 import logo from '../../assets/logo.jpg'
-import { cn } from "@/lib/utils";
 
 const Navbar = () => {
     const { user } = useAppSelector((state) => state.auth);
@@ -73,6 +72,16 @@ const Navbar = () => {
                             >
                                 <span className=" bg-left-bottom pb-2 bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                                     Community
+                                </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className="group  transition-all duration-300 ease-in-out"
+                                to="/volunteer"
+                            >
+                                <span className=" bg-left-bottom pb-2 bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                    Volunteer
                                 </span>
                             </Link>
                         </li>
