@@ -23,7 +23,7 @@ const AboutUs = () => {
                         <div className="w-full px-4 mb-10 md:w-1/2 lg:mb-0">
                             <p className="mb-4 text-base leading-7 text-gray-500 dark:text-gray-400">
                                 At Donation.com, we are dedicated to providing a better
-                                facility for managing health and medical supplies, especially in
+                                facility for managing health and medical donations, especially in
                                 post-disaster scenarios.
                             </p>
                             <ul className="mb-10">
