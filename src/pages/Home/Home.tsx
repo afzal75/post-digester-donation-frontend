@@ -2,8 +2,8 @@ import AboutUs from "./AboutUs";
 import Banner from "./Banner";
 import Gallery from "./Gallery";
 import SupplyCardList from "./DonationCardList";
-import OurMission from "./OurMisson";
 import ContactUs from "../contact/ContactUs";
+import OurMission from "./OurMission";
 
 const Home = () => {
     return (

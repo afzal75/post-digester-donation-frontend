@@ -5,7 +5,7 @@ import { Modal } from "antd";
 import SupplyForm from "../forms/DonateForm";
 import getImageURL from "@/lib/getImageURL";
 import { toast } from "sonner";
-import { TSupply } from "@/types/types";
+import { TDonation } from "@/types/types";
 import { useUpdateDonationMutation } from "@/redux/features/donation/donation";
 
 const EditDonateModal = ({ id }: { id: string }) => {
@@ -19,7 +19,7 @@ const EditDonateModal = ({ id }: { id: string }) => {
     };
     const [updateSupply] = useUpdateDonationMutation();
 
-    const onFinish = async (values: Partial<TSupply>) => {
+    const onFinish = async (values: Partial<TDonation>) => {
         if (image) {
             values.image = image;
         }
