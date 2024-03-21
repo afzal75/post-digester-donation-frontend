@@ -48,7 +48,7 @@ const OurMission = () => {
     return (
         <div className="py-20">
             <div className="text-center mb-20">
-                <h4 className="text-secondary text-lg font-semibold mb-3">
+                <h4 className="text-primary text-lg font-semibold mb-3">
                     JOIN OUR MISSION
                 </h4>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl text-primary dark:text-white font-bold mb-2">

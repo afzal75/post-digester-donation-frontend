@@ -22,7 +22,7 @@ const AboutUs = () => {
                     <div className="flex flex-wrap items-center">
                         <div className="w-full px-4 mb-10 md:w-1/2 lg:mb-0">
                             <p className="mb-4 text-base leading-7 text-gray-500 dark:text-gray-400">
-                                At MedReliefHub.com, we are dedicated to providing a better
+                                At Donation.com, we are dedicated to providing a better
                                 facility for managing health and medical supplies, especially in
                                 post-disaster scenarios.
                             </p>
@@ -40,7 +40,7 @@ const AboutUs = () => {
                                             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
                                         </svg>
                                     </span>
-                                    Swift and effective disaster relief.
+                                    Swift and effective disaster relief donation.
                                 </li>
                                 <li className="flex items-center mb-4 text-base text-gray-600 dark:text-gray-400">
                                     <span className="mr-3 text-primary dark:text-blue-400">
@@ -55,7 +55,7 @@ const AboutUs = () => {
                                             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
                                         </svg>
                                     </span>
-                                    Our journey in humanitarian aid.
+                                    Our journey in donation aid.
                                 </li>
                                 <li className="flex items-center mb-4 text-base text-gray-600 dark:text-gray-400">
                                     <span className="mr-3 text-primary dark:text-blue-400">
