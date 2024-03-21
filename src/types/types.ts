@@ -7,6 +7,16 @@ export type TDonation = {
     title: string;
 };
 
+export type TComment = {
+    _id: string;
+    email: string;
+    commenterName: string;
+    comments: string;
+    timestamp: string;
+    image?: string;
+    commenterImage?: string;
+};
+
 
 export type TDonorData = {
     _id: string;

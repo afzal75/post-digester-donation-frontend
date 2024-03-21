@@ -56,20 +56,28 @@ const Navbar = () => {
                                 </span>
                             </Link>
                         </li>
-                        <li
-                            className="lg:mb-0 mb-5 cursor-pointer  group relative text-white hover:text-secondary"
-                        >
-                            <NavLink
+                        <li>
+                            <Link
+                                className="group  transition-all duration-300 ease-in-out"
                                 to="/leaderboard"
-                                className={({ isActive }) =>
-                                    cn({
-                                        "text-secondary": isActive,
-                                    })
-                                }
                             >
-                                Leaderboard
-                            </NavLink>
+                                <span className=" bg-left-bottom pb-2 bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                    Leaderboard
+                                </span>
+                            </Link>
                         </li>
+                        <li>
+                            <Link
+                                className="group  transition-all duration-300 ease-in-out"
+                                to="/community"
+                            >
+                                <span className=" bg-left-bottom pb-2 bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                    Community
+                                </span>
+                            </Link>
+                        </li>
+
+
                         <li>
                             <Link
                                 className="group  transition-all duration-300 ease-in-out"
