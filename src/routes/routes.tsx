@@ -13,6 +13,7 @@ import Leaderboard from "@/pages/donations/Leaderboard";
 import Community from "@/pages/community/Community";
 import VolunteerForm from "@/components/forms/VolunteerForm";
 import AboutPage from "@/pages/about/AboutPage";
+import CreateTestimonial from "@/pages/admin/CreateTestimonial";
 
 
 export const router = createBrowserRouter([
@@ -74,6 +75,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/create-donation",
                 element: <CreateDonation />,
+            },
+            {
+                path: "/dashboard/create-testimonial",
+                element: <CreateTestimonial />,
             },
         ]
     },

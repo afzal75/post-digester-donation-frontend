@@ -6,6 +6,7 @@ import logo from '../../assets/logo.jpg'
 
 const Navbar = () => {
     const { user } = useAppSelector((state) => state.auth);
+    console.log(user)
     return (
         <header className="container bg-primary text-white text-center font-semibold relative mx-auto flex flex-col px-4 py-4 lg:flex-row lg:items-center">
             <Link

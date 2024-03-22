@@ -7,6 +7,7 @@ import {
     FileDoneOutlined,
     EditOutlined,
     OrderedListOutlined,
+    PlusCircleFilled
 } from "@ant-design/icons";
 import logo from '../../assets/logo.jpg'
 
@@ -34,6 +35,13 @@ const AdminSidebar = () => {
                     icon: React.createElement(EditOutlined),
                 },
             ],
+        },
+        {
+            key: "create-testimonial",
+            label: (
+                <NavLink to="/dashboard/create-testimonial">Create Testimonial</NavLink>
+            ),
+            icon: React.createElement(PlusCircleFilled),
         },
     ];
     return (

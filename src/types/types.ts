@@ -27,6 +27,15 @@ export type TDonorData = {
 };
 
 
+export type TTestimonial = {
+    _id: string;
+    name: string;
+    designation: string;
+    testimonial: string;
+    image: string;
+};
+
+
 
 export type TVolunteer = {
     _id: string;
