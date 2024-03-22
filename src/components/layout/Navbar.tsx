@@ -85,6 +85,16 @@ const Navbar = () => {
                                 </span>
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                className="group  transition-all duration-300 ease-in-out"
+                                to="/about-us"
+                            >
+                                <span className=" bg-left-bottom pb-2 bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                    About-us
+                                </span>
+                            </Link>
+                        </li>
 
 
                         <li>

@@ -40,12 +40,6 @@ const VolunteerForm = () => {
                     backgroundPosition: "cover",
                 }}>
                 <div className="col-span-12 md:col-span-2">
-                    {/* <img
-                        
-                        // className="object-cover size-60 w-full mx-auto"
-                        // src={volunteerBanner}
-                        alt=""
-                    /> */}
                 </div>
                 <div className="col-span-12 text-center md:col-span-3 space-y-2 text-white ">
                     <h1 className="text-4xl ">VOLUNTEER RECRUITMENT</h1>

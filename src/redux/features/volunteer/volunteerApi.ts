@@ -10,8 +10,15 @@ const volunteerApi = baseApi.injectEndpoints({
             }),
             invalidatesTags: ["volunteer"],
         }),
+        getVolunteer: builder.query({
+            query: () => ({
+                url: "/volunteer",
+                method: "GET",
+            }),
+            providesTags: ["volunteer"],
+        }),
     }),
 });
 
-export const { useCreateVolunteerMutation } =
+export const { useCreateVolunteerMutation, useGetVolunteerQuery } =
     volunteerApi;
