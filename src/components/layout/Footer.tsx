@@ -25,7 +25,7 @@ const Footer = () => {
                                 to="/"
                                 className="text-2xl cursor-pointer flex items-end gap-1"
                             >
-                                <span className="font-bold opacity-90">Peace</span>
+                                <span className="font-bold opacity-90">RELIFEDONATION</span>
                             </Link>
                         </div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 E-Mail:
-                                <span className="text-secondary"> office@peace.com</span>
+                                <span className="text-secondary"> office@donation.com</span>
                             </li>
                         </ul>
                         <div className="flex justify-start items-center gap-5 my-5">
@@ -64,7 +64,7 @@ const Footer = () => {
                 </div>
                 <hr className="w-10/12 mx-auto mt-20" />
                 <div className="flex justify-center py-8 text-lg">
-                    © Copyright {currentYear} by Peace
+                    © Copyright {currentYear} by Donation
                 </div>
             </div>
         </motion.footer>

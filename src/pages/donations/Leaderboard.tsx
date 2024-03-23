@@ -1,4 +1,4 @@
-import Spinner from "@/components/ui/Spinner";
+import Loading from "@/components/ui/Loading";
 import {
     Table,
     TableBody,
@@ -24,7 +24,7 @@ const Leaderboard = () => {
     if (isFetching) {
         return (
             <div className="h-screen">
-                <Spinner />
+                <Loading />
             </div>
         );
     }
