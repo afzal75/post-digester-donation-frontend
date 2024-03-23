@@ -27,8 +27,8 @@ const DonationCard = ({ _id, amount, category, image, title }: TDonation) => {
                             {category}
                         </span>
                     </div>
-                    <p className="italic text-primary font-semibold">
-                        <span className=" text-primary dark:text-secondary">$</span>
+                    <p className="italic font-semibold text-orange-500">
+                        <span className="text-primary">$</span>
                         {amount}
                     </p>
                 </div>

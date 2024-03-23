@@ -40,10 +40,10 @@ const OurVolunteers = () => {
                                         className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
                                     />
                                 </motion.div>
-                                <h4 className="text-xl font-semibold text-slate-700 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+                                <h4 className="text-xl font-semibold dark:text-white mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
                                     {item.firstName} {item.lastName}
                                 </h4>
-                                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                                <span className="dark:text-white text-center block transition-all duration-500 group-hover:text-gray-900">
                                     {item.city}
                                 </span>
                             </div>

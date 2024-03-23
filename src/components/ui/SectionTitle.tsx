@@ -10,7 +10,7 @@ type TSectionProps = {
 const SectionTitle = ({ name, title, subTitle, className }: TSectionProps) => {
     return (
         <div className={cn(`px-4 mb-10 text-center md:my-20 ${className} `)}>
-            <p className="mb-2 text-lg font-semibold text-primary dark:text-gray-400">
+            <p className="mb-2 text-lg font-semibold  dark:text-gray-300">
                 {name}
             </p>
             <h2 className="pb-2 text-2xl font-bold  md:text-4xl dark:text-gray-300">

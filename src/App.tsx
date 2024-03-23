@@ -1,12 +1,38 @@
-import Navbar from "./components/layout/Navbar"
+// import MainLayout from "./components/layout/MainLayout";
+// // import { useAppSelector } from "./redux/hook";
+
+// function App() {
+//   // const { darkMode } = useAppSelector((store) => store.theme);
+//   return (
+//     <div
+//     // className={` min-h-screen w-full ${darkMode ? "bg-black text-white" : ""
+//     //   }`}
+//     >
+//       <MainLayout />
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+import MainLayout from "./components/layout/MainLayout";
+import { useAppSelector } from "./redux/hook";
+
 
 function App() {
-
+  const { darkMode } = useAppSelector((store) => store.theme);
   return (
-    <>
-      <Navbar />
-    </>
-  )
+    <div
+      className={` min-h-screen w-full ${darkMode ? "bg-black text-white" : ""
+        }`}
+    >
+      <MainLayout />
+    </div>
+  );
 }
 
-export default App
+export default App;

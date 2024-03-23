@@ -3,6 +3,7 @@ import { BsFillBuildingsFill } from "react-icons/bs";
 import { GiPeaceDove } from "react-icons/gi";
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const intro = {
     hidden: { opacity: 0 },
@@ -47,14 +48,10 @@ const OurMission = () => {
     const inView = useInView(view);
     return (
         <div className="py-20">
-            <div className="text-center mb-20">
-                <h4 className="text-primary text-lg font-semibold mb-3">
-                    JOIN OUR MISSION
-                </h4>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl text-primary dark:text-white font-bold mb-2">
-                    How Can You Help
-                </h2>
-            </div>
+            <SectionTitle
+                name="JOIN OUR MISSION"
+                title="How Can You Help"
+            />
             <motion.div
                 className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-3 justify-items-center items-center gap-5 text-center"
                 ref={view}
@@ -69,10 +66,10 @@ const OurMission = () => {
                     <motion.div variants={icons} initial="initial" animate="animate">
                         <FaHandHoldingHeart className="size-24 bg-primary  p-5 rounded-full border-2 border-secondary text-secondary mb-3"></FaHandHoldingHeart>
                     </motion.div>
-                    <h2 className="text-primary dark:text-white text-2xl font-bold">
+                    <h2 className="dark:text-white text-2xl font-bold">
                         DONATION
                     </h2>
-                    <p className="text-slate-700 dark:text-slate-300">
+                    <p className="dark:text-white">
                         Your generosity fuels change and transforms lives.
                     </p>
                 </motion.div>
@@ -84,10 +81,10 @@ const OurMission = () => {
                     <motion.div variants={icons} initial="initial" animate="animate">
                         <BsFillBuildingsFill className="size-24 bg-primary  p-5 rounded-full border-2 border-secondary text-secondary mb-3"></BsFillBuildingsFill>
                     </motion.div>
-                    <h2 className="text-primary dark:text-white text-2xl font-bold">
+                    <h2 className="dark:text-white text-2xl font-bold">
                         REBUILD
                     </h2>
-                    <p className="text-slate-700 dark:text-slate-300">
+                    <p className="dark:text-white">
                         Together, we're rebuilding communities and restoring hope.
                     </p>
                 </motion.div>
@@ -97,10 +94,10 @@ const OurMission = () => {
                         <motion.div variants={icons} initial="initial" animate="animate">
                             <GiPeaceDove className="size-24 bg-primary  p-5 rounded-full border-2 border-secondary text-secondary mb-3"></GiPeaceDove>
                         </motion.div>
-                        <h2 className="text-primary dark:text-white text-2xl font-bold">
+                        <h2 className="dark:text-white text-2xl font-bold">
                             PEACE
                         </h2>
-                        <p className="text-slate-700 dark:text-slate-300">
+                        <p className="dark:text-white">
                             Join us in fostering harmony and building a world of unity.
                         </p>
                     </div>

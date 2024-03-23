@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import Sidebar from "./Sidebar";
-import { useAppSelector } from "@/redux/hook";
+import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import logo from '../../assets/logo.jpg'
+import { toggleTheme } from "@/redux/features/theme/themeSlice";
+import { Moon, Sun } from "lucide-react";
 
 const Navbar = () => {
+    const dispatch = useAppDispatch()
     const { user } = useAppSelector((state) => state.auth);
-    console.log(user)
+    const { darkMode } = useAppSelector((store) => store.theme);
+
+    const handleToggleTheme = () => {
+        dispatch(toggleTheme());
+    };
+    console.log(darkMode)
     return (
         <header className="container bg-primary text-white text-center font-semibold relative mx-auto flex flex-col px-4 py-4 lg:flex-row lg:items-center">
             <Link
@@ -108,12 +116,19 @@ const Navbar = () => {
                                 </span>
                             </Link>
                         </li>
+
                         <li>
+                            <button
+                                onClick={handleToggleTheme}
+                                className="rounded-lg backdrop-blur-[2px] p-1 inline-block"
+                            >
+                                {darkMode ? <Sun /> : <Moon size={24} />}
+                            </button>
+                        </li>
 
-                            <div>
 
-                            </div>
 
+                        <li>
                             <li>
                                 {user ? (
                                     <div title={user?.email}>

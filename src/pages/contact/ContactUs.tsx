@@ -5,7 +5,9 @@ import { Mail } from "lucide-react";
 
 const ContactUs = () => {
     return (
-        <div className="container relative mx-auto w-full max-w-7xl  text-gray-700">
+        <div
+            className=
+            "container relative mx-auto w-full max-w-7xl  text-gray-700">
             <div className="grid grid-cols-2">
                 <div className="order-1 col-span-full">
                     <iframe
@@ -93,7 +95,7 @@ const ContactUs = () => {
                                 <Form.Item
                                     style={{ color: "red" }}
                                     label={
-                                        <label style={{ color: "#374151" }}>Your Full Name</label>
+                                        <label style={{ color: "#dark:text-white" }}>Your Full Name</label>
                                     }
                                     name="Name"
                                     rules={[{ required: true, message: "Please enter name" }]}

@@ -17,7 +17,8 @@ const Donations = () => {
                 {data?.result?.map((item: TDonation) => (
                     <div
                         key={item._id}
-                        className=" grid grid-cols-3 items-center w-full rounded-xl  mx-auto  shadow-2xl"
+                        className=" grid grid-cols-3 
+                        items-center w-full rounded-xl  mx-auto  shadow-2xl"
                     >
                         <div className="col-span-1">
                             <img
@@ -27,10 +28,10 @@ const Donations = () => {
                             />
                         </div>
                         <div className="col-span-2 px-4 py-6">
-                            <h3 className="text-xl truncate font-semibold text-gray-800">
+                            <h3 className="text-xl truncate font-semibold dark:text-white">
                                 {item.title}
                             </h3>
-                            <p className="mt-2 truncate text-sm text-gray-400">
+                            <p className="mt-2 truncate text-sm dark:text-white">
                                 {item.description}
                             </p>
 
@@ -40,7 +41,7 @@ const Donations = () => {
                                 </div>
                                 <div className="mr-2 rounded  px-2.5 py-0.5 text-xs font-semibold">
                                     <p>
-                                        <span className="text-2xl font-bold text-slate-900">
+                                        <span className="text-2xl font-bold dark:text-white">
                                             ${item.amount}
                                         </span>
                                         <span className="text-sm text-slate-900">per pack</span>

@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import MainLayout from "../components/layout/MainLayout";
 import Home from "@/pages/Home/Home";
 import Login from "@/pages/Login";
 import Donations from "@/pages/donations/Donations";
@@ -14,12 +13,13 @@ import Community from "@/pages/community/Community";
 import VolunteerForm from "@/components/forms/VolunteerForm";
 import AboutPage from "@/pages/about/AboutPage";
 import CreateTestimonial from "@/pages/admin/CreateTestimonial";
+import App from "@/App";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <MainLayout />,
+        element: <App />,
         children: [
             {
                 path: "/",
