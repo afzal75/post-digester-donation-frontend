@@ -2,7 +2,7 @@
 
 ## Live URL
 
-You can access the live version of RelifeDonation: https://relife-digester-donation.vercel.app/
+https://post-digester-donation-frontend.vercel.app/
 
 ## Setup
 
