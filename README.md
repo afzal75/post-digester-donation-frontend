@@ -2,7 +2,7 @@
 
 ## Live URL
 
-You can access the live version of MedReliefHub [here](https://relife-digester-donation.vercel.app/).
+You can access the live version of RelifeDonation: https://relife-digester-donation.vercel.app/
 
 ## Setup
 
