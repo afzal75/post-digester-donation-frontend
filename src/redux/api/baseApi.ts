@@ -4,7 +4,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const baseApi = createApi({
     reducerPath: "baseApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://post-digester-donation-frontend.vercel.app/api/v1",
+        baseUrl: "https://post-digester-donation-backend.vercel.app/api/v1",
+        credentials: "include"
     }),
     tagTypes: ["Donations", "donor", "comments", "volunteer", "testimonial"],
     endpoints: () => ({}),
